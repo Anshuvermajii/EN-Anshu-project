@@ -1,0 +1,64 @@
+<html>
+<head>
+<link href="css/bootstrap.css" rel="stylesheet"/>
+<link href="css/all.css" rel="stylesheet"/>
+<script src="js/bootstrap.bundle.js"></script>
+<style>
+.login
+{
+min-height:500px;
+}
+.b
+{
+min-height:4px;
+background:linear-gradient(45deg,aqua,orange) !important ;
+}
+</style>
+</head>
+<body>
+<!-- start modal -->
+<p class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#box">Login Here</p>
+<!-- Modal -->
+<div class="modal fade" id="box" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-body">
+<b class="text-danger float-end" data-bs-dismiss="modal"><i class="fa-solid fa-circle-xmark"></i></b>
+<div class="row login">
+<div class="col-sm-12" style="background:#f8f9fb;">
+<div class="row">
+<div class="col-sm-12 b"></div>
+</div>
+<p class="fs-6 mt-3 text-center fw-semibold">APPLY FOR JOB</p>
+<div class="row">
+<div class="col-sm-6">
+<form>
+Apply For<br/>
+<input type="text" placeholder="Choose" class="form-control" />
+Email</br>
+<input type="email" placeholder="Enter Email" class="form-control" />
+Location</br>
+<textarea placeholder="Enter full address" class="form-control" style="height:100px;"></textarea>
+</div>
+<div class="col-sm-6">
+Name<br/>
+<input type="text" placeholder="Choose" class="form-control" />
+Phone</br>
+<input type="number" placeholder="Enter Mobile" class="form-control" />
+City</br>
+<input type="text" placeholder="Enter City" class="form-control" />
+Choose File</br>
+<input type="file" value="Choose your file" class="form-control" />
+</div>
+<input type="submit" value="Submit Resume" class="btn btn-info form-control" />
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end modal -->
+</body>
+</html>
