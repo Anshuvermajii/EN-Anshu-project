@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="./css/all.css" rel="stylesheet"/>
+    <link href="./css/bootstrap.css" rel="stylesheet"/>
+    <script src="js/bootstrap.bundle.js" res="stylesheet"></script> 
+
+</head>
+<body>
+    <p></p>
+    <div id="box"></div>
+
+    <div class="input-group w-25 mx-auto">
+<input type="text" onkeyup="dataSearch(this)" placeholder ="type here" class="form-control">
+
+<i class="input-group-text">
+search
+</i>
+    </div>
+
+    
+    <script>
+
+var studentInfo=[
+                   {name:"ram",age:23,branch:"cs",city:"lucknow",pic:"1.jfif"},
+                   {name:"rohan",age:24,branch:"cs",city:"lucknow",pic:"2.jfif"},
+                   {name:"anshu",age:32,branch:"cs",city:"lucknow",pic:"3.jfif"}
+        
+        
+        
+        ]
+    
+        var res="<table class='table table-hover'><tr><th>SR NO</th><th>NAME</th><th>Age</th><th>BRANCH</th><th>CITY</th><th>picture</th></tr>"
+           var srno=0;
+           studentInfo.forEach((data)=>{
+            srno++;
+       res+=`
+           <tr>
+            <td>${srno}</td>
+            <td>${data.name}</td>
+            <td>${data.age}</td>
+            <td>${data.branch}</td>
+            <td>${data.city}</td>
+            <td><img src="images/${data.pic}"height='40px'/></td>
+              
+            
+            
+            
+            </tr>
+`
+
+
+           })
+           res+="</table>"
+          var x= document.querySelector("p").innerHTML=res
+          
+          //document.write(res)
+          function dataSearch(a){
+                 
+            var res="<table class='table table-hover'><tr><th>SR NO</th><th>NAME</th><th>Age</th><th>BRANCH</th><th>CITY</th><th>picture</th></tr>"
+           var srno=0;
+            studentInfo.forEach((data)=>{
+
+                
+    if((data.name.includes(a.value)==true)||data.city.includes(a.value)==true){
+        srno++;
+       res+=`
+           <tr>
+            <td>${srno}</td>
+            <td>${data.name}</td>
+            <td>${data.age}</td>
+            <td>${data.branch}</td>
+            <td>${data.city}</td>
+            <td><img src="images/${data.pic}"height='40px'/></td>
+              
+            
+            
+            
+            </tr>
+`
+          }
+
+          
+          
+
+        })
+        res+="</table>"
+       
+        document.querySelector("#box").innerHTML=res
+    }
+
+    </script>
+</body>
+</html>
