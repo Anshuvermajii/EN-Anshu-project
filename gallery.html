@@ -1,0 +1,151 @@
+<html>
+<head>
+<style>
+#outer{
+height:600px;
+width:900px;
+//background:red;
+
+border:2px solid black
+
+
+
+
+}
+.row{
+height:300px;
+width:900px;
+//background:red;
+
+//margin:0px auto;
+
+}
+.c{
+
+
+
+height:280px;
+width:280px;
+//background:red;
+border:5px groove silver;
+float:left;
+box-sizing:border-box;
+margin:10px;
+padding:10px;
+background:rgba(146,211,67,.4)
+transform-style:preserve-3d;
+}
+.c img{
+
+height:100%;
+width:100%;
+transition:4s;
+
+
+
+
+}
+//.c img:hover{
+
+transform: perspective(500px) rotateX(130deg);
+tansition:2s;
+filter:grayscale(100%);
+box-shadow
+
+
+}
+
+</style>
+
+
+
+</head>
+<body>
+
+
+<div id="outer">
+<div class="row">
+<div class="c">
+<img src="z:\html notes/google1.jpg" id="first" onmouseleave="demo(this)">
+
+</div>
+<div class="c">
+<img src="z:\html notes/google.jpg" id="second"  >
+</div>
+<div class="c">
+<img src="z:\html notes/google2.jpg" id="third" onmouseleave="demo1(this)">
+</div>
+
+
+
+</div>
+<div class="row">
+
+
+<div class="c">
+<img src="z:\html notes/google.jpg" id="four" >
+</div>
+<div class="c">
+
+
+<img src="z:\html notes/google1.jpg" id="five" onmouseleave="demo2(this)">
+</div>
+<div class="c">
+<img src="z:\html notes/google2.jpg" id="six">
+</div>
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+<script>
+
+function demo(){
+
+
+var a=document.querySelector("#first")
+var b=document.querySelector("#second").src=a.src
+
+
+
+}
+function demo1(){
+
+
+
+var c=document.querySelector("#third")
+var d=document.querySelector("#four").src=c.src
+
+
+}
+setInterval("demo1()",1000)
+
+function demo2(){
+
+
+
+var e=document.querySelector("#five")
+var g=document.querySelector("#six").src=e.src
+
+
+}
+
+
+</script>
+
+
+</body>
+
+
+
+
+
+
+
+</html>

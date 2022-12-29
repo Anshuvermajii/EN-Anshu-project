@@ -1,0 +1,101 @@
+<html>
+    <head>
+
+
+
+
+
+
+
+<style>
+
+
+div{
+
+
+
+height: 50px;
+width:212px;
+background: red;
+border: 8px groove grey;
+
+
+text-align: center;
+line-height: 50px;
+border-radius: 5px;
+font-size: 49px;
+float: left;
+margin: 2px;
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+    </head>
+
+    <body onload="demo()">
+        <input type="text" id="txt"/>
+
+<p></p>
+<script>
+function demo(){
+
+var s="012bc567e89daf43"
+var dv=""
+for(var  a=0; a<=100; a++){
+
+var color="#"
+var color1="#"
+for(var i=0; i<=5; i++){
+
+
+var rIndex=Math.floor(Math.random()*16)
+var rIndex1=Math.floor(Math.random()*16)
+
+var rCh=s[rIndex]
+var rCh1=s[rIndex1]
+var color=color+rCh
+var color1=color1+rCh1
+
+
+}
+dv =dv+"<div onclick='copyCode(this)' style='background:"+color+";border:8px groove "+color1+"'>"+color+"</div>"
+
+}
+document.querySelector("p").innerHTML=dv
+
+
+
+}
+
+
+
+
+//setInterval(demo,100)
+
+function copyCode(x){
+//alert(x.innerText)
+var txt=document.querySelector("input")
+txt.value=x.innerText
+txt.select()
+
+document.execCommand("copy")
+alert("color code copy")
+
+
+
+}
+
+</script>
+
+
+
+    </body>
+</html>
