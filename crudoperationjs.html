@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./css/all.css" rel="stylesheet"/>
+    <link href="./css/bootstrap.css" rel="stylesheet"/>
+    <script src="js/bootstrap.bundle.js"></script> 
+    <style>
+.form-control{
+ margin-bottom: 4px;
+
+}
+body{
+
+background-color: orange;
+
+}
+
+    </style>
+
+</head>
+<body>
+<div class="container-fluid">
+
+<div class="col-sm-4 mx-auto pt-5">
+
+<input type="text" placeholder="enter your name" id="name" class="form-control"/>
+<input type="number" placeholder="enter your number" id="mobno" class="form-control"/>
+<input type="email" placeholder="enter your email"  id="email" class="form-control"/>
+<input type="city" placeholder="enter your city"  id="city" class="form-control"/>
+<input type="file"  id="fu" class="form-control"/>
+<button onclick="add()" class="btn btn-primary">SAVE</button>
+ 
+</div>
+<div id="anshu"></div>
+
+</div>
+<script>
+
+var studentInfo=[]
+var Name=document.querySelector("#name")
+var mobile=document.querySelector("#mobno")
+var email=document.querySelector("#email")
+var city=document.querySelector("#city")
+var fu=document.querySelector("#fu")
+
+function add(){
+
+
+var fileName=fu.value.split('\\').pop()
+//alert(fileName)  
+
+studentInfo.push({Name:Name.value,Mobile:mobile.value,Email:email.value,City:city.value,Picture:fileName})
+console.log(studentInfo)
+showData()
+}
+function showData(){
+ var res="<center><table><tr><th>NAME||</th><th>NUMBER||</th><th>EMAIL||</th><th>CITY||</th><th>PIC||</th></tr></center>"
+studentInfo.forEach((data)=>{
+res+=`
+<tr>
+    <td >${data.Name}</td>
+    <td>${data.Mobile}</td>
+    <td>${data.Email}</td>
+    <td>${data.City}</td>
+    <td><img src='images/${data.Picture}' height="30px"/></td>
+    
+    
+    </tr>
+
+
+
+`
+
+
+
+})
+res+="</table>"
+document.querySelector("#anshu").innerHTML=res
+}
+
+
+
+</script>
+    
+</body>
+</html>
