@@ -1,0 +1,32 @@
+.success{
+
+color:green;
+background-color: lightblue;
+padding:5px;
+height: auto;
+width: 100%;
+border:1px solid red;
+border-radius:4px;
+
+
+
+}
+.error{
+
+
+   
+
+        color:red;
+        background-color: yellow;
+        padding:5px;
+        height: auto;
+        width: 100%;
+        border:1px solid black;
+        border-radius:4px;
+        
+        
+        
+        
+        
+        }
+
