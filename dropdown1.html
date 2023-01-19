@@ -1,0 +1,69 @@
+<html>
+
+<head></head>
+<body>
+<p></p>
+
+<b></b>
+<script>
+
+var MyState=["UP","MP","BIHAR"]
+var dd1="<select onchange='myCity(this)'>"
+for(var i of MyState){
+
+dd1+="<option>"+i+"</option>"
+
+}
+
+dd1+="</select>"
+
+
+document.querySelector("p").innerHTML=dd1
+
+
+function myCity(a){
+
+
+var ucity=["Lucknow","Varanasi","Kanpur"]
+var mcity=["Katani","Satana","Bhopal"]
+var bcity=["Aara","Chapra","Gaya"]
+var city="<select>"
+    if(a.value=="UP"){
+
+for (var i of ucity){
+city+="<option>"+i+"</option>"
+
+
+}
+
+
+    
+}
+else if(a.value=="MP"){
+for(var y of mcity){
+city+="<option>"+y+"</option>"
+
+
+}
+
+
+}
+else if(a.value=="BIHAR"){
+for(var z of bcity){
+city+="<option>"+z+"</option>"
+
+
+}
+
+
+}
+city+="</select>"
+//alert(city)
+document.querySelector("b").innerHTML=city
+}
+
+</script>
+
+</body>
+
+</html>
