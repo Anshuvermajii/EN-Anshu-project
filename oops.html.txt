@@ -1,0 +1,805 @@
+             ======      ARRAY FUNCTION==========
+			 push==
+			 ------
+			 push function is used to add element at last index of array and return length of update array 
+			 push last index of array ,new array
+			 EXA..
+			 var  arr =["anshu","mohan"]
+			 var x=arr.push("techpile")
+			        
+					
+					 
+					filter()
+					=========
+					
+					
+					folter function i s used to filter items of aaray and return new array based on some  condition.
+					syntax==
+					arr.filter (fnction)
+					function (currentItem,index,arr)
+					here array and arr is option array.
+					
+					
+					
+					map()===
+					-------
+					if we want to add some functionallity to every  elements of array nd genratae new array the we have to map function  	..
+=>>>>>> map function is not aabblicable for empty aaray 
+
+=>>>>> it does not update original array.
+Syntax
+======
+arr.map(function)
+function (cuurentvalue,index,arr)	
+
+
+    DATE 21/12/2022
+---------------------
+
+
+ pop()
+ ====
+ is used to remove to last element of array and return removed element
+ arr=["Ram","Shyam","Raj"]
+ alert(arr.pop())
+ ============================
+        shift()
+		-------
+		is used to remove first element of an array and remove the element ..
+		
+		
+		var arr=[1,2,3,4,5,]
+		var x=arr.shift()
+		alert(x)
+ 
+                unshift()
+				------
+ 
+ 
+              	 is used to add an element of an array and remove the element ..
+				 =>it return length of update array
+		
+		delete
+		=======
+		is used to delete value of an array  without index.
+		ex ..
+		var arr=["Ram","Mohan","Sohan"]
+		delete arr[1]
+		
+		
+		          join()
+				  -------------
+				  -------------
+				  is used to join element of array on the basis of seprator and return new sting.
+				  it does not update orignal array .
+				  var=["Ram","Shyam","Mohan"]
+				  arr.join("||")
+				  
+				  
+				  every()
+			 
+		-------
+		
+		is used check weather given condition satisfy all elemnts of array or not
+		=>it returns true if all elemnts of array satisfy given condition otherwise it returns false..
+		syntax ..
+		arr.every ((data,index,array)=>{
+		return condition
+		
+		
+		})
+		
+		var arr=["Ram","Mohan","John"]		
+
+ var a=arr.every((data)=>{
+
+return data[1]=="A"
+
+
+});
+documet.write(a)
+
+
+
+                       Date=22/12/2022
+					   -----------------
+					   
+     some()
+	 -------
+	 is used to chekweather any elememnt of array satisfiing given condition or not .
+		  
+=> it return true if any  element of array satisfiying given condition otherwise it return false .
+ex....
+var arr=["Ram","Mohan","Shyam","Rohan"]	
+arr.some(function(data,index,arr){
+return condition 
+
+})			  
+				 var a=arr.some((data)=>{
+				 return data[0]=="R"
+				 
+				 
+				 
+				 }) 
+				 
+				 
+				 reduce()
+				 -------
+				 is used to reduce elements of array in single value by appliy some functionality.
+				 
+				 
+				 
+				 var arr=[1,2,3,4,5,6,7,]//traling comma
+				 syntax===
+				 --------
+				 arr.reduce(t, data, index, arr)
+				 t= initial value / previously return value 
+				 
+				 
+				 
+				   <script>
+				   
+				   var arr=[1,2,3,4,5,6,7,]
+				   var x=arr.reduce((total,data,index,arr)=>{
+				   
+				   total=total+data
+				   return total
+				              
+				   
+				   
+				   })
+				   </script>
+				 
+				 splice()=
+				 ----------
+				 
+				 
+				 
+				 
+				 splice () is used to add or remove elements to/from array....
+				 =>it update orignal array.
+				 
+				 
+var arr=["Ram","Mohan","Sohan"]
+arr.splice(x,y, items1,items2,......itemN)		
+x=start
+y=how many elememnts we want to  remove	
+length	 
+	
+ex..
+var arr=["Ram","Mohan","Sohan"]
+ arr.splice(1,1,"Anshu")
+
+
+       keys()==
+-------------------
+is used to create array itration of array keys(index)..
+ 
+ 
+ 
+ ex.....
+<script>
+
+
+var arr=["Ram","Mohan","Sohan"]
+var x=arr.keys()
+for(var i of x)
+{
+
+alert("keys:" +i)
+
+}
+
+</script>
+
+
+
+       entries()=
+	   ------- 
+	   is used to create itration of array keys and values...
+	   
+				 
+				 ex..
+				 <script>
+
+
+var arr=["Ram","Mohan","Sohan"]
+var x=arr.entrise()
+for(var i of x)
+{
+
+alert("keys:" +i)
+
+}
+
+</script>
+				  
+			 values()==
+              -------
+is used to create itration of array only values>>.
+<script>
+
+
+var arr=["Ram","Mohan","Sohan"]
+var x=arr.values()
+for(var i of x)
+{
+
+alert("keys:" +i)
+
+}
+
+</script>
+
+               date=23/10/2022--
+                 ================	
+             toString()=
+			 -------
+			 is used to convert elements of array into string based of array into string sapreted by comma...
+			 
+			ex....
+				 var arr=["Ram","Mohan","Sohan"]
+				  var x=arr.toString()
+				  document.write(x)
+		
+		
+		
+		
+				 
+				 concat()==
+				 --------------
+				                  
+								  
+								  
+								  
+						  
+								  concat function is used to multiple array ,	
+								  into one array..
+								 | ------|
+								 | ex... |
+								 | ------
+								  var arr1=[1,2,3,4,5]
+								  var arr2=[10,20,30,40,50]
+								  var arr3=["Ram","Rohan"]
+								  
+								  var narr=arr1.concat(arr2,arr3)
+								  
+								 flat()=
+								   ------
+ is used to convert multi-dimention array into single dimensional array...
+								
+								   
+								      var arr=["RAM",45,["LUCKNOW",226022,[1,2,3,4,5,6]]]
+								  
+	                   var  nArr=[]                 							     
+								  
+								  
+								  
+								  
+								  
+ find()== 
+ -----
+ is used to return  first element of array that stisfied
+ condition...
+ 
+ syntax===
+ ---------
+ 
+ arrr.find((data,index,arr)=>{
+ 
+ return condition 
+ 
+ })
+ 
+ 
+ 
+ 
+ 
+ findIndex()=
+ ---------
+ is used to return index of first element that setisfing condition..
+ 
+ 
+ 
+ ex--
+ 
+ arrr.findIndex((data,index,arr)=>{
+ 
+ return condition 
+ 
+ })
+ 
+      modules concept()====
+	  -----------------------
+	  modul is the collection of variable, function and classes
+save to a single file(.js extention)
+every .js extension file is tracked like modul.
+file1.js==
+---------
+
+ export var a=10
+ export function demo(){
+
+
+alert ("ok")
+
+
+}	  
+
+ export class Test{
+
+demo1(){
+
+
+
+
+}
+
+}
+  
+  
+========
+file2.js 
+=========
+import {a,demo,Test} from "./file2.js"
+  alert(a)
+  demo()
+  var obj =new Test()
+  
+  
+	  
+	  obj. demo1()
+	  --------------
+	  
+	  
+	  index.html==
+	  --------------
+	  <script type="module" src="./file2.js"></script>
+	  -----------------------------------------------
+	  member aliasing || rename 
+	  ========================
+	  import {firstName as f f,lastName as l,fun1 as f1,fun2 as f2,Test as T}
+	 ===============================================================
+	 destructuring==
+	 -----------------
+	 destructuring is a process to hold element of array /object 
+	 into the corresponding variable
+
+	 var arr=[1,2,3]
+     var i1=arr[0]
+     var i2=arr[1]
+     var i3=arr[0]
+     [i1,i2,i3]=arr
+
+
+	   object=
+	   ----------
+	   object is the collection of properti
+	   (variable) and methods (function)
+	   =>if we want represent a group of value in from of key/value then wee
+	   have to use object data type .
+	   =>in javaScript object is denoted{},
+	   =>here value can be duplicate but key can't be duplicate 
+	   =>if we are trying to duplicate key then first value of key will 
+	   be replace with new value of key..
+	   ar obj={1:"ram",2:"Mohan",3:"john","a b":"abcd",1:"rohan"}
+	   alert(obj[1])//rohan
+
+
+	   syntax====
+	   ---------
+	   {key1:value1,key2:"value2,.........keyN:valueN}
+	   exe==
+	   var studentInfo={name:"ram",age:40}
+	   =================================
+	   **how to acces elememnt of object
+	   ============================
+	   syntax=
+	   -----
+	   objectName[key]//value of key
+	   ===============
+	   studentInfo[name]
+	   studentInfo[age]
+	   ============
+	   srudentInfo.name
+	   ============
+	   var obj={1:"ram",2:"Mohan",3:"john"}
+	   alert(obj[1])
+	   ====================
+	   var obj1={name:"rohan",age:40}
+	   *******
+	   how to change value of key?
+	   =====================
+	   obj1.name="rohit"
+	   console.log(obj1)//rohit
+	   *******************
+	   how to add new key in a object.
+	   ==================================
+	   objectName.key=value
+	   ---------------------
+	   obj1.salary=5000000
+	   console.log(obj1)
+------------------------
+
+
+var empInfo={
+
+name:"rohan",
+salary:500000,
+address:{ 
+
+city:"LUCKNOW",
+pincode:226022,
+
+}
+
+}
+console.log(
+	`
+	name:${empInfo.name}
+	salary:${empInfo.salary}
+	city:${empInfo.address.city}
+pincode:${empInfo.address.pincode}
+	
+	`
+)
+=============================
+var obj ={
+name:"ram"
+fun:function()
+{
+console.log("i am fro fun")
+
+
+
+}
+console.log(`
+
+${obj.name}
+${obj.fun()}
+
+
+`)
+
+
+
+}
+date=28/12/2022
+===============
+var obj1={
+city:"lakimpur",
+pin:262701
+
+}
+
+
+var obj={
+
+name="rahul",
+age:45,
+demo(){
+
+console.log(
+`
+city:${obj1.city}
+pincode:${obj1.pincode}
+
+`
+
+
+)
+
+}
+}
+console.log(
+`
+name:${obj.name}
+age:${obj.age}
+`
+
+)
+obj.demo()
+
+
+-----------------------
+hasOwnproperty==
+================
+is used to check whether given key present in n object or not 
+it return returns true if given key present in given object  otherwise is return false...
+ex==
+---
+var obj1={
+
+city:"lucknow ",
+pincode:226022,
+
+
+}
+
+
+console.log(obj1.hasOwnProperty("propertyname"))
+console.log(obj1.hasOwnProperty("name"))//false
+console.log(obj1.hasOwnProperty("city"))//true
+
+=================================================
+var obj={
+
+name:"anshu",
+age:"19",
+salary:4000000000,
+
+
+
+}
+var arr=[2,3,4,5,6]
+for (var i in obj)	
+{
+
+console.log(i)
+
+}  
+	  
+	   keys()==
+	   ----------
+	   is used to create array itrater with key of an object..
+	   var obj1={
+       1:1,
+	   2:2,
+	   3:3,
+
+
+
+
+	   }
+	   syntax===
+	   ----------
+	  var object.keys(objName)
+	  exa==
+	  ======
+	  var x=object.keys(obj1)
+
+
+
+
+	  values
+	  -------
+	var obj1={
+       1:1,
+	   2:2,
+	   3:3,
+	    }
+		var arr =object.values(obj1)
+		for(var i of arr)
+		{
+console.log(i)
+
+
+		}
+		==================
+
+
+		var arr=new Array()
+
+
+		var obj=new Object ({name:"anshu",age:45})
+		console.log(obj.name)
+		console.log(obj.age)
+		obj.salary:500000
+		obj.name="ram"
+		console.log(obj)
+
+
+		====================
+		=======ARRAY OF OBJECT=======
+		------------------------------
+		it is collection of object 
+		var  arr=[{},{},{}........{}]
+		{}=>{key:value1,key1:value2......keyN:valueN}
+		var studentInfo=[
+           {name:"ram",age:23,branch:"cs",city:"lucknow"},{name:"rohan",age:24,branch:"cs",city:
+		   "lucknow"},{name:"anshu",age:32,branch:"cs",city:"lucknow"}
+
+
+
+]
+
+
+		   *****************************
+		   how to access element of array of object
+		   ******************************************
+		   studentInfo[0].name//ram
+		   studentInfo[0][name]//ram
+		   studentInfo[0].age//23
+		   studentInfo[0].Branch//cs
+		   studentInfo[0].city//lucknow
+
+		   date=2/01/2023==
+		   -----------------
+		HOISTING==
+		=========
+hoisting is a process to move all declearation to top in it's scope.
+=> hoisting is not ablicable java script class.
+=>hoisting is default process done by javascript Engin..
+ex==
+=====
+class Test 
+{
+demo(){
+console.log("ok")
+
+
+}
+
+
+}
+var obj = new Test()
+obj.demo()
+-----------------------
+		alert(x)
+		demo()
+		function demo(){
+
+   alert(ok)
+
+		}
+
+      var x=10
+	  ----------------
+                OOPS====
+                   =====
+   oops== stands for object oriented  progrraming system
+   => oops is programing paradigm  or pattern to create program by using class and object 
+   => Advantage  of oops is code reusability....
+  class 
+  object 
+  method 
+  inheritence
+  encapsulation 
+  etc.
+
+
+  class==----
+  -----
+  is collection of propertey (variable)and method (function).
+
+  => class keyword is used to create class in js..
+ syntax==
+ -----
+ class className
+ {
+ propertyname
+ methods
+
+ }
+or
+var className=class{
+propertey
+methods
+
+
+}  
+
+object====
+
+------
+
+
+ =>object is a class type variable.
+ => to access members of class compulsoury we have create object of that class
+
+ => refrence variable ===
+ ------------------------
+ refrence variable is used to refer (store) object of class..
+ => in js new keyword is used to create object of an class
+ syntax==
+ ---
+ var refrence variable=new className()
+
+           ==CONSTRUCTOR==
+            -------------
+
+
+
+
+ CONSTRUCTOR is a special type of  method
+ =>CONSTRUCTOR method called automatically at the time of object creation 
+ of class...
+ =>CONSTRUCTOR main purpose of CONSTRUCTOR method is to craete property 
+ of a class..
+ =>CONSTRUCTOR keyword is used to create CONSTRUCTOR in js...
+
+ ex===
+
+class className{
+  constructor()// without parameter
+  }
+
+
+  constructor with parameter
+  ====================
+  class myClass{
+
+constructor(name,age){
+
+this.Name=name//instance variable
+this.Age=age
+this.salary=20000000
+
+}
+}
+
+
+var obj =new myClass("anhu",0)
+ =====
+ class myClass{
+ constructor() {//automatic invoked
+   console.log("hello iam a soft constructor") 
+
+ }
+demo()
+{
+    console.log("demo method")
+}
+
+
+  }
+
+  var obj1=new myClass()
+  obj1.demo()
+
+
+
+  =====date=03/01/2023===
+      ------------------
+
+{constractor me instance variable se objet me propertey define hoti hoti he''''''}
+
+ instance variable ko accsec krne ke liye this keyword ka use krte he
+ ex==
+ ${this.name}
+ ======================================================================
+
+      date=04/01/2023==
+	  ------------------
+
+inheritence====
+------------
+1.single inheritence.
+2.multilevel inheritence.
+3.herirical inheritence
+4.multiple inheritence
+5.Hybrid inheritence
+6.cycle inheritence.
+===============================
+ polymorphism
+ ==============
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
