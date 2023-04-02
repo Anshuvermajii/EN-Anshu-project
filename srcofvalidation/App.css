@@ -1,0 +1,66 @@
+.app{
+
+
+
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+background: linear-gradient(
+
+
+rgba(255,255,255, o.7)
+rgba(255,255,255, o.5)
+
+),
+url("../public/images/1.jfif");
+background-size:cover;
+background-position: center;
+}
+form{
+
+    background-color: black;
+    color:white;
+    padding-left: 0px 60px;
+    border-radius: 10px;
+
+}
+h1{
+color:red;
+text-align: center;
+font-size: 20px;
+
+}
+button{
+
+height: 30px;
+width:100%;
+border:none;
+padding: 10px;
+background-color: red;
+color:black;
+cursor: pointer;
+font-weight: bold;
+margin-top: 15px;
+border-radius: 5px;
+margin-bottom: 4px;
+
+
+}
+span{
+color:red;
+font-size: 17px;
+display: none;
+
+}
+
+input:invalid[focused="true"]{
+border:1px solid red;
+
+}
+
+input:invalid[focused="true"] ~ span{
+
+display: block;
+
+}
