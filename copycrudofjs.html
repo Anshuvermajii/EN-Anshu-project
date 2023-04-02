@@ -1,0 +1,201 @@
+<html>
+<head>
+<link href="css/bootstrap.css" rel="stylesheet"/>
+<link href="css/all.css" rel="stylesheet"/>
+<style>
+.login
+{
+height:800px;
+}
+.txtcolor
+{
+color:orange;
+}
+.a{
+
+background-color: green;
+font-size: 25 px;
+font-family: initial;
+color:white;
+}
+.b{
+
+color:red;
+font-size: 25px;
+
+
+}
+
+
+</style>
+
+</head>
+<body >
+   
+
+<div class="container-fluid login bg-light"> 
+
+<div class="row">
+<div class="col-6">
+<div style="margin-left:200px;font-size:30px;">Online <b class="txtcolor">Training</b></div>
+<div style="margin-left:50px;">If love is true then only the two lines of love become the basis of love life.</div>
+<div class="input-group mt-5">
+<i class="input-group-text text-bg-secondary"><i class="fa-solid fa-calendar-days"></i></i>
+<input type="text" id="ans1"  placeholder="17/11/2022" class="form-control"/>
+</div><br/>
+<div class="input-group" >
+<i class="input-group-text bg-secondary"><i class=" fa-solid fa-pen"></i></i>
+<select  id="ans2" class="form-control " >
+<option selected>Select Training Name</option>
+<option>summer</option>
+<option>app</option>
+<option>winter</option>
+</select>
+</div><br/>
+<div class="input-group" >
+<i class="input-group-text bg-secondary"><i class="fa-sharp fa-solid fa-desktop"></i></i>
+<select id="ans3" class="form-control ">
+<option selected>Select your Course</option>
+<option >C.S</option>
+<option>E.E</option>
+<option>C.V</option>
+</select>
+</div><br/>
+<div class="input-group">
+<i class="input-group-text text-bg-secondary"><i class="fa-solid fa-phone"></i></i>
+<input type="number" id="ans4" placeholder="Enter number" class="form-control "/>
+</div>
+<br/>
+<div id="ans"  class="input-group">
+<i class="input-group-text text-bg-secondary"><i class="fa-solid fa-indian-rupee-sign"></i></i>
+<input type="number" id="ans5" placeholder="Remaining to pay" class="form-control "/>
+</div><br/> 
+<input type="button" onclick="demo()" id="btn" class="btn btn-warning" value="Save"/>
+
+</div>
+
+
+<div class="col-6  ">
+<div style="margin-left:200px;font-size:30px;">Online <b class="txtcolor">Benifits</b></div><br/>
+<div style="margin-top:-15px; margin-left:230px;"> Some Training benifits</div>
+<div style="background:light;background:#f8f9fa;height:350px;width:600px;font-size:18px;border-radius:5px;margin-left:50px;margin-top:20px;"><br/>
+
+<img src="C:\Users\anshuverma\Desktop\appbootstrapfile\images\google1.jpg" height="300px" width="500px" alt="pic" />
+</div>
+</div>
+</div>
+<div id="sho"></div>
+</div>
+
+<script>
+    var inputInfo=[];
+    
+var a1=document.querySelector("#ans1")
+var a2=document.querySelector("#ans2")
+var a3=document.querySelector("#ans3")
+var a4=document.querySelector("#ans4")
+var a5=document.querySelector("#ans5")
+var btn=document.querySelector("#btn")
+
+    function demo(){
+
+if(a1.value!="" && a2.value!="" && a3.value!="" && a4.value!="" && a5.value!=""){
+if(btn.value=="Save"){
+
+    inputInfo.push({Date:a1.value,Traning:a2.value,Course:a3.value,Number:a4.value,Pay:a5.value})
+}
+else if(btn.value=="UPDATE"){
+
+    inputInfo[i].Date=a1.value
+            inputInfo[i].Traning=a2.value
+            inputInfo[i].Course=a3.value
+            inputInfo[i].Number=a4.value
+            inputInfo[i].Pay=a5.value
+           
+            btn.value="Save"
+          
+}
+
+}
+else{
+        alert("Please fill all field..")
+    }
+    a1.value=""
+        a2.value=""
+        a3.value=""
+        a4.value=""
+        a5.value=""
+
+//alert(a1)
+
+
+//console.log(inputInfo)
+showData()
+}
+function showData(){
+    var srno=0;
+    var res="<table class='table table-stripted'> <tr class='a'><th>SRNO</th><th>DATE</th><th>TRANING</th><th>COURSE</th><th>NUMBER</th><th>PAY</th><th>Edit Record</th><th>Delete Record</th></tr>"
+   inputInfo.forEach((data)=>{
+      srno++;
+
+
+
+
+res+=`
+      <tr class="b">
+        <th>${srno}</th>
+        <th>${data.Date}</th>
+        <th>${data.Traning}</th>
+        <th>${data.Course}</th>
+        <th>${data.Number}</th>
+        <th>${data.Pay}</th>
+        <td><button class='btn btn-warning' onclick='edit(this)'>Edit</button></td>
+                    <td><button class='btn btn-danger' onclick='remove(this)'>Delete</button></td>
+                    
+        
+        
+        
+        
+        </tr>
+
+
+`
+})
+res+="</table>"
+document.querySelector("#sho").innerHTML=res
+ 
+}
+function remove(x){
+
+    var itoDelete=x.parentElement.parentElement.firstElementChild.innerText-1
+    var status=confirm("Are you sure want to delete record ?")
+    if(status==true)
+    {
+    inputInfo.splice(itoDelete,1)
+    }
+    //console.log(studentInfo.length)
+    showData()
+    
+
+
+
+}
+function edit(x)
+        {
+        i=x.parentElement.parentElement.firstElementChild.innerText-1//1
+        btn.value="UPDATE"
+        a1.value=inputInfo[i].Date
+        a2.value=inputInfo[i].Course
+        a3.value=inputInfo[i].Number
+        a4.value=inputInfo[i].Pay
+        
+        //document.querySelector("#im").src=`images/${studentInfo[i].Picture}`
+        }
+        
+
+</script>
+
+
+
+</body>
+</html>
