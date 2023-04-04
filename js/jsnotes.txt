@@ -773,6 +773,51 @@ inheritence====
 ===============================
  polymorphism
  ==============
+                           data=3/4/2023
+=========================================================
+
+
+
+   node js
+==========
+multer
+==========
+
+Another  macine :server on port :8080
+public
+    |upload
+       |1.png ....
+
+
+Problem:we cannot upload, large amount of data in mongodb atlas because of size restrication 
+
+
+
+
+Using multer you can upload single /multiple files.
+
+to upload single file :we use upload.single (' input -file-name')
+to upload multiple file :we used upload.multiple ('input-file-name') folder.
+
+
+step to file uploads:-
+1.public
+    |uploads|
+2.npm install multer.
+3.create multer instance
+const upload =multer({
+
+dest:"public"
+
+})
+
+eg:- <input type ="file name ="image"/>
+
+4.  Problem :file which will be upload is not of readble format this file does not have any exten
+ 
+
+
+
 
 
 
